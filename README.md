@@ -42,3 +42,8 @@
 - scheduler를 사용하여 하루를 주기로 db 전체를 순회합니다.
 - 순회하여 현재 시스템 날짜보다 validation_date가 작은 row를 모두 찾습니다.
 - validation_date, original_url, short_url을 null 값으로 처리하여, 추후 동일한 original_url을 입력해도 기능하도록 하였습니다.
+<br>
+<br>
+<br>
+<br>
+## Swagger API 명세서
