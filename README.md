@@ -36,4 +36,9 @@
 **통계 기능**
 - 퍼블릭 주소/status/short_key 형식의 주소를 받습니다.
 - 로직은 다소 간소한데, short_key에 해당되는 row를 찾은 다음, 해당 row의 status를 반환하는 구조입니다.
+<br>
 
+**URL 키 만료 기능**
+- scheduler를 사용하여 하루를 주기로 db 전체를 순회합니다.
+- 순회하여 현재 시스템 날짜보다 validation_date가 작은 row를 모두 찾습니다.
+- validation_date, original_url, short_url을 null 값으로 처리하여, 추후 동일한 original_url을 입력해도 기능하도록 하였습니다.
