@@ -86,7 +86,7 @@ async def find_status(short_key: str, db: db_dependency):
 
 
 #URL키 만료 기능입니다. 일정 시간 간격으로 db를 체크합니다.
-#하루 주기로 db를 체크하며, 해당 날짜가 지난 row는 id와 status를 제외하고 null 값이 됩니다.
+#하루 주기로 db를 체크하며, 해당 날짜가 지난 row는 id와 status를 제외하고 null로 대체하였습니다.
 def check_validation():
     db = next(get_db())
     expire_day = datetime.today()
