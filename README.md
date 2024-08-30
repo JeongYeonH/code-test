@@ -47,8 +47,10 @@
 <br>
 <br>
 <br>
+
 ## 테스트 코드
 테스트 코드는 test.py에 작성되었으며, 각 테스트 하는 기능은 다음과 같습니다.
+
 - test_post_url: original_url를 보낼 경우, short_url이 생성되어 반환되는지 테스트 합니다.
 - test_get_short_url: short_url로 접속할 경우 original_url로 리다이렉션이 되어 반환되는 url이 https://로 시작되는지 확인하며, status 가 +1 증가하는지 테스트 합니다.
 - test_get_status: stats/{short_key} 로 인자를 받을 시, 조회수 값이 반환되는지 테스트합니다.
