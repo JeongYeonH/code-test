@@ -101,7 +101,7 @@ async def url_redirect(short_key: str, db: db_dependency):
 async def find_status(short_key: str, db: db_dependency):
     url = db.query(models.URLs).filter(models.URLs.short_url == short_key).first()
 
-    return {"status": url.status}
+    return {"stats": url.status}
 
 
 
