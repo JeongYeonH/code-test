@@ -97,7 +97,7 @@ async def url_redirect(short_key: str, db: db_dependency):
 
 
 #통계 기능입니다. 여기서 조회 방문 수가 나타납니다.
-@app.get("/status/{short_key}", status_code=303)
+@app.get("/stats/{short_key}", status_code=303)
 async def find_status(short_key: str, db: db_dependency):
     url = db.query(models.URLs).filter(models.URLs.short_url == short_key).first()
 
