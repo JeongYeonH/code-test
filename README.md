@@ -25,7 +25,7 @@
 - 각각 원래 url 주소와, 해당 주소로 생성되 short_url의 유효기간을 validation_date(필수 아님)로 받습니다.
 - validation_date는 yyyy-mm-dd 형식으로 받습니다.
 - 별도의 generate_hashed_url 함수를 생성하여, 해당 함수로 해쉬화된 url을 생성하도록 하였습니다.
-- - 중복되는 short_url 생성을 방지하기 위해, 동일한 short_url 생성 시, 최대 약 10여번 새로운 hash를 생성합니다.
+  - 중복되는 short_url 생성을 방지하기 위해, 동일한 short_url 생성 시, 최대 약 10여번 새로운 hash를 생성합니다.
 - 생성된 short_url은 DB내 저장이 되며, 최종적으로 반환됩니다.
 <br>
 
@@ -77,7 +77,7 @@ db에 현재 저장되어 있는 일부 샘플들 입니다.<br>
 ## Swagger 및 명세서
 Swagger 명세서의 json 형태로 export한 내역은 다음 아래에 있습니다.<br>
 또한 아래 스크린 샷으로 json이 적용된 swagger 명세서 일부를 올립니다.<br>
-각 라우트의 public 주소는 http://43.201.5.12/ 입니다. 현재 EC2에 배포하여 접속이 가능하며, 혹시 이상이 있을 경우 문의 부탁드립니다.<br>
+각 라우트의 public 주소는 http://43.201.5.12/ 입니다. 현재 EC2에 배포하여 접속이 가능하며, 이상이 있을 경우 문의 부탁드립니다.<br>
 swgger 문서는 html로 만들었습니다. <br>
 
 ![제목 없음](https://github.com/user-attachments/assets/d41b8274-89dc-479e-8e54-be83d3bb83c8)
