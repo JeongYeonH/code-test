@@ -21,9 +21,10 @@
 ## 기능 및 구현 소개
 
 **단축 URL 생성**
-- 요청은 json body 형태로 받으며, 반드시 필요한 데이터는 original_url과 validation_date입니다.
-- 각각 원래 url 주소와, 해당 주소로 생성돈 short_url의 유효기간을 validation_date로 받습니다.
+- 요청은 json body 형태로 받으며, 필요한 데이터는 original_url과 validation_date입니다.
+- 각각 원래 url 주소와, 해당 주소로 생성되 short_url의 유효기간을 validation_date(필수 아님)로 받습니다.
 - 별도의 generate_hashed_url 함수를 생성하여, 해당 함수로 해쉬화된 url을 생성하도록 하였습니다.
+- - 중복되는 short_url 생성을 방지하기 위해, 동일한 short_url 생성 시, 최대 약 10여번 새로운 hash를 생성합니다.
 - 생성된 short_url은 DB내 저장이 되며, 최종적으로 반환됩니다.
 <br>
 
@@ -42,6 +43,16 @@
 - scheduler를 사용하여 하루를 주기로 db 전체를 순회합니다.
 - 순회하여 현재 시스템 날짜보다 validation_date가 작은 row를 모두 찾습니다.
 - validation_date, original_url, short_url을 null 값으로 처리하여, 추후 동일한 original_url을 입력해도 기능하도록 하였습니다.
+<br>
+<br>
+<br>
+<br>
+## 테스트 코드
+테스트 코드는 test.py에 작성되었으며, 각 테스트 하는 기능은 다음과 같습니다.
+- test_post_url: original_url를 보낼 경우, short_url이 생성되어 반환되는지 테스트 합니다.
+- test_get_short_url: short_url로 접속할 경우 original_url로 리다이렉션이 되어 반환되는 url이 https://로 시작되는지 확인하며, status 가 +1 증가하는지 테스트 합니다.
+- test_get_status: stats/{short_key} 로 인자를 받을 시, 조회수 값이 반환되는지 테스트합니다.
+
 <br>
 <br>
 <br>
