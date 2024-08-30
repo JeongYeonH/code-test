@@ -61,6 +61,19 @@
 <br>
 <br>
 
+## 샘플
+db에 현재 저장되어 있는 일부 샘플들 입니다.<br>
+
+|Original_url|Short_url|
+|:---:|:---|
+|https://www.daum.net| 20cb1abced625f3f38f5 |
+|https://naver.com|a5386825af428de96220|
+
+
+<br>
+<br>
+<br>
+<br>
 ## Swagger 및 명세서
 Swagger 명세서의 json 형태로 export한 내역은 다음 아래에 있습니다.<br>
 또한 아래 스크린 샷으로 json이 적용된 swagger 명세서 일부를 올립니다.<br>
