@@ -65,6 +65,7 @@
 Swagger 명세서의 json 형태로 export한 내역은 다음 아래에 있습니다.<br>
 또한 아래 스크린 샷으로 json이 적용된 swagger 명세서 일부를 올립니다.<br>
 각 라우트의 public 주소는 http://43.201.5.12/ 입니다. 현재 EC2에 배포하여 접속이 가능하며, 혹시 이상이 있을 경우 문의 부탁드립니다.<br>
+swgger 문서는 html로 만들었습니다. <br>
 
 ![제목 없음](https://github.com/user-attachments/assets/d41b8274-89dc-479e-8e54-be83d3bb83c8)
 
